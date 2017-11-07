@@ -16,8 +16,8 @@ public class MinesweeperBoard2{
     int columns;
     public MinesweeperBoard2(int row, int column){
         //Put the constructor here.
-        rows = 10;
-        columns = 10;
+        this.rows = row;
+        this.columns = column;
         board = new Cell[rows*columns];
         
         //These pieces are for the GUI.
@@ -32,9 +32,12 @@ public class MinesweeperBoard2{
     public MinesweeperBoard2(){
         this(10,10);
     }
-
+    
     public void addBombs(int bombs) { //throws Exception{
-        
+       for (int i = 0; i < bombs; i++){
+           int x = (int)(Math.random() * (rows*columns) - 1);
+           board[x].setBomb();
+        }
     }
 
     public void addNums(){
@@ -44,9 +47,15 @@ public class MinesweeperBoard2{
      *  It is still required for all students.
      */
     public void printBoard(){
+        int index = 0;
         for (int i = 0; i < rows; i++){
             for (int j = 0; j < columns; j++){
-                System.out.print(0 + " ");
+                if (board[index].getValue() == -1){
+                    System.out.print("X ");
+                } else {
+                    System.out.print(board[index].getValue() + " ");
+                }
+                index++;
             }
             System.out.println();
         }

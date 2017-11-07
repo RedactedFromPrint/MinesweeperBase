@@ -55,6 +55,12 @@ public class Cell implements ActionListener{
             button.setText(String.valueOf(value));
         }
     }
+    public int getValue(){
+        return value;
+    }
+    public void setBomb(){
+        value = -1;
+    }
     public JButton getButton() {
         return button;
     }
