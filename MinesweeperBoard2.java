@@ -35,14 +35,21 @@ public class MinesweeperBoard2{
     
     public void addBombs(int bombs) { //throws Exception{
        for (int i = 0; i < bombs; i++){
-           int x = (int)(Math.random() * (rows*columns) - 1);
-           board[x].setBomb();
+           boolean placed = false;
+           while (!placed){
+               int index = (int) (Math.random() * (rows*columns));
+               if (board[index].getValue() == 0){
+                   board[index].setBomb();
+                   placed = true;
+                }
+            }
         }
     }
 
     public void addNums(){
         
     }
+    
     /**This method is used for testing and will be deleted if using the GUI.
      *  It is still required for all students.
      */
