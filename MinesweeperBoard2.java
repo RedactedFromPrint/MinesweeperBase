@@ -47,7 +47,36 @@ public class MinesweeperBoard2{
     }
 
     public void addNums(){
-        
+        if((index % 10) == 0){
+            
+        }
+        if((index % 10) == 1){
+            
+        }
+        if((index % 10) == 2){
+            
+        }
+        if((index % 10) == 3){
+            
+        }
+        if((index % 10) == 4){
+            
+        }
+        if((index % 10) == 5){
+            
+        }
+        if((index % 10) == 6){
+            
+        }
+        if((index % 10) == 7){
+            
+        }
+        if((index % 10) == 8){
+            
+        }
+        if((index % 10) == 9){
+            
+        }
     }
     
     /**This method is used for testing and will be deleted if using the GUI.
