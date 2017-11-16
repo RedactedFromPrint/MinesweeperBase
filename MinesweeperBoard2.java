@@ -47,31 +47,22 @@ public class MinesweeperBoard2{
     }
 
     public void addNums(){
+        for (int i = 0; i < (rows*columns); i++){
+            if (board[i].getValue() == -1){
+                if (board (rows*columns)
+                if (board[i + 1].getValue() == -1){
+                    
+                } else {
+                    board[i + 1].numAdd();
+                }
+                if (board[i - 1].getValue() == -1){
+                    
+                } else {
+                    board[i - 1].numAdd();
+                }
+            }
+        }
         if((index % 10) == 0){
-            
-        }
-        if((index % 10) == 1){
-            
-        }
-        if((index % 10) == 2){
-            
-        }
-        if((index % 10) == 3){
-            
-        }
-        if((index % 10) == 4){
-            
-        }
-        if((index % 10) == 5){
-            
-        }
-        if((index % 10) == 6){
-            
-        }
-        if((index % 10) == 7){
-            
-        }
-        if((index % 10) == 8){
             
         }
         if((index % 10) == 9){

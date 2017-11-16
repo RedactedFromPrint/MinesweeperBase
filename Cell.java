@@ -51,7 +51,7 @@ public class Cell implements ActionListener{
         if(this.isBomb()){
             button.setText("\u2600");
             button.setBackground(Color.RED);
-        }else if(value!=0){
+        } else if(value!=0){
             button.setText(String.valueOf(value));
         }
     }
@@ -60,6 +60,10 @@ public class Cell implements ActionListener{
     }
     public void setBomb(){
         value = -1;
+    }
+    public int numAdd(){
+        value += 1;
+        return value;
     }
     public JButton getButton() {
         return button;
