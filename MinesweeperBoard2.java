@@ -47,27 +47,7 @@ public class MinesweeperBoard2{
     }
 
     public void addNums(){
-        for (int i = 0; i < (rows*columns); i++){
-            if (board[i].getValue() == -1){
-                if (board (rows*columns)
-                if (board[i + 1].getValue() == -1){
-                    
-                } else {
-                    board[i + 1].numAdd();
-                }
-                if (board[i - 1].getValue() == -1){
-                    
-                } else {
-                    board[i - 1].numAdd();
-                }
-            }
-        }
-        if((index % 10) == 0){
-            
-        }
-        if((index % 10) == 9){
-            
-        }
+        
     }
     
     /**This method is used for testing and will be deleted if using the GUI.
@@ -75,8 +55,13 @@ public class MinesweeperBoard2{
      */
     public void printBoard(){
         int index = 0;
-        for (int i = 0; i < rows; i++){
-            for (int j = 0; j < columns; j++){
+        int x = 0;
+        for (int i = 0; i < (rows*columns); i++){
+            x++;
+            if (x == columns){
+                System.out.println();
+                x = 0;
+            } else{
                 if (board[index].getValue() == -1){
                     System.out.print("X ");
                 } else {
@@ -84,7 +69,6 @@ public class MinesweeperBoard2{
                 }
                 index++;
             }
-            System.out.println();
         }
     }
     public JPanel addCells(){
